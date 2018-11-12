@@ -4,6 +4,7 @@
 \alias{square}
 \alias{cube}
 \alias{reciprocal}
+\alias{Box_Cox}
 \title{Apply a useful power}
 \usage{
 square(x, plot_it = FALSE)
@@ -11,6 +12,8 @@ square(x, plot_it = FALSE)
 cube(x, plot_it = FALSE)
 
 reciprocal(x, plot_it = FALSE)
+
+Box_Cox(x, lambda, plot_it = FALSE)
 }
 \arguments{
 \item{x}{The vector to be squared or cubed.}

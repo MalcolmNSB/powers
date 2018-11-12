@@ -35,3 +35,20 @@ cube <- function(x, plot_it=FALSE) pow(x, a=3, plot_it=plot_it)
 #' @rdname square
 #' @export
 reciprocal <- function(x, plot_it=FALSE) pow(x, a=-1, plot_it=plot_it)
+
+#' @rdname square
+#' @export
+Box_Cox <- function(x, lambda, plot_it = FALSE){
+            if(all(x > 0)){
+                if(lambda != 0){
+                  (pow(x, a = lambda, plot_it=plot_it) - 1)/lambda
+                }
+                else{
+                   log(x)
+                }
+            }
+            else{
+                stop("vector input must have all positive entries")
+            }
+           }
+
