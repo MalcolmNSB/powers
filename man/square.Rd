@@ -4,8 +4,8 @@
 \alias{square}
 \alias{cube}
 \alias{reciprocal}
-\alias{Box_Cox}
-\title{Apply a useful power}
+\alias{Box_Cox_transform}
+\title{Power and Box-Cox Transformations}
 \usage{
 square(x, plot_it = FALSE)
 
@@ -13,13 +13,15 @@ cube(x, plot_it = FALSE)
 
 reciprocal(x, plot_it = FALSE)
 
-Box_Cox(x, lambda, plot_it = FALSE)
+Box_Cox_transform(x, lambda)
 }
 \arguments{
-\item{x}{The vector to be squared or cubed.}
+\item{x}{The vector of data.}
 
-\item{plot_it}{Display a plot of \code{x} vs the output? Use logical.
-\code{FALSE} by default.}
+\item{plot_it}{Display a plot of \code{x} and a power of \code{x}? Use logical.
+\code{FALSE} by default. Not used for the Box-Cox transform.}
+
+\item{lambda}{A parameter for the Box-Cox transformation only, of length 1 or 2.}
 }
 \value{
 A vector that is the:
@@ -27,12 +29,16 @@ A vector that is the:
      \item square (for \code{square})
      \item cube (for \code{cube})
      \item reciprocal/inverse (for \code{reciprocal})
+     \item Box-Cox transform, with either one or two parameters
+     (see https://en.wikipedia.org/wiki/Power_transform#Box%E2%80%93Cox_transformation for
+     further details on the transform.)
+
 }
  of \code{x}.
 }
 \description{
-That's it -- these functions just square, cube, or take the
-reciprocal/inverse of a vector.
+Take the square, cube,
+reciprocal/inverse, or Box-Cox transform (with parameter lambda) of a vector.
 }
 \details{
 If you really want to see more, check out the internal \code{\link{pow}}
@@ -42,4 +48,6 @@ function that these functions depend on.
 cube(tenvec)
 square(-5)
 reciprocal(2)
+Box_Cox(c(1,1.73,2.3), 0.5)
+
 }

@@ -1,12 +1,12 @@
 Package: powers
 Type: Package
-Title: Convenient Computation of Powers
+Title: Convenient Computation of Powers including the family of Box-Cox transformations
 Version: 0.1.0
 Authors@R: person("Vincenzo", "Coia", email="vincen.coia@stat.ubc.ca",
     role=c("aut", "cre"))
 Description: Are you tired of using the power operator in R?
     Use this package to call functions that apply common powers
-    to your vectors. 
+    to your vectors, or to compute Box-Cox transformations.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
