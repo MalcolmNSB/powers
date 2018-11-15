@@ -7,7 +7,7 @@
 powers, Box-Cox transform
 =========================
 
-This is an R package that allows you to compute power functions. You can also compute a Box-Cox transform
+This is an R package that allows you to compute power functions. You can also compute a [Box-Cox transform](https://en.wikipedia.org/wiki/Power_transform#Box%E2%80%93Cox_transformation).
 
 Installation
 ------------
