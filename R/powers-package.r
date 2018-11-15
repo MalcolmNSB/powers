@@ -2,7 +2,7 @@
 #'
 #' Are you tired of using the power operator, \code{^} or \code{**} in R?
 #' Use this package to call functions that apply common powers
-#' to your vectors.
+#' to your vectors, including the Box-Cox transform.
 #'
 #' @name powers
 #' @author Vincenzo Coia

@@ -29,7 +29,7 @@ A vector that is the:
      \item square (for \code{square})
      \item cube (for \code{cube})
      \item reciprocal/inverse (for \code{reciprocal})
-     \item Box-Cox transform, with either one or two parameters
+     \item Box-Cox transform (for \code{Box_Cox_transform}), with either one or two parameters
      (see https://en.wikipedia.org/wiki/Power_transform#Box%E2%80%93Cox_transformation for
      further details on the transform.)
 
@@ -48,6 +48,6 @@ function that these functions depend on.
 cube(tenvec)
 square(-5)
 reciprocal(2)
-Box_Cox(c(1,1.73,2.3), 0.5)
+Box_Cox_transform(c(1,1.73,2.3), 0.5)
 
 }

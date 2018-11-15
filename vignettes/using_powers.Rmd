@@ -1,6 +1,6 @@
 ---
 title: "Using the `powers` package"
-author: "Vincenzo Coia"
+author: "Vincenzo Coia (modified by Malcolm Bowles)"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
@@ -25,7 +25,14 @@ cube(1:10)
 reciprocal(1:10)
 ```
 
-`apply`-family friendly, too!
+Need to apply a [Box-Cox transform](https://en.wikipedia.org/wiki/Power_transform#Box%E2%80%93Cox_transformation)  to your data? You can do that too!
+```{r}
+Box_Cox_transform(1:10, 2)
+Box_Cox_transform(1:10, c(1,2))
+```
+
+
+`apply`-family friendly, too! (Box-Cox transform excluded.)
 
 ```{r}
 my_list <- list(1:10, 0.5, -0.7)
@@ -35,7 +42,7 @@ lapply(my_list, function(x) x^2)
 lapply(my_list, square)
 ```
 
-It even comes with the ability to display its output in plot form!
+It even comes with the ability to display its output in plot form! (Box-Cox transform excluded.)
 
 ```{r}
 reciprocal(1:10, plot_it=TRUE)
